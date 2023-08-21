@@ -26,7 +26,7 @@ function update_system() {
     curl -LO $system_update_url
     chmod +x system_update.sh
     ./system_update.sh
-    rm system_update.sh
+    rm -f system_update.sh
 }
 
 # 安装Java
@@ -34,7 +34,7 @@ function install_java() {
     curl -LO $java_install_url
     chmod +x java_install.sh
     ./java_install.sh
-    rm java_install.sh
+    rm -f java_install.sh
 }
 
 # 主程序
