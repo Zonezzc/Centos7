@@ -1,12 +1,5 @@
 #!/bin/bash
-###
- # @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- # @Date: 2023-08-21 17:23:49
- # @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- # @LastEditTime: 2023-08-21 18:38:21
- # @FilePath: /Centos7/smart_scaffold.sh
- # @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
-### 
+
 
 # 检测当前IP地址是否在中国
 ip_result=$(curl -s cip.cc)
@@ -30,7 +23,7 @@ function show_menu() {
 
 # 更新系统
 function update_system() {
-    curl -O $system_update_url
+    curl -LO $system_update_url
     chmod +x system_update.sh
     ./system_update.sh
     rm system_update.sh
@@ -38,7 +31,7 @@ function update_system() {
 
 # 安装Java
 function install_java() {
-    curl -O $java_install_url
+    curl -LO $java_install_url
     chmod +x java_install.sh
     ./java_install.sh
     rm java_install.sh
