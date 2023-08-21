@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # 检测当前IP地址是否在中国
 ip_result=$(curl -s cip.cc)
 if [[ $ip_result == *"中国"* ]]; then
@@ -8,8 +9,8 @@ else
     ghproxy_url=""
 fi
 
-system_update_url="${ghproxy_url}https://github.com/Zonezzc/Centos7/blob/main/script/system_update.sh"
- java_install_url="${ghproxy_url}https://github.com/Zonezzc/Centos7/blob/main/script/java_install.sh"
+system_update_url="${ghproxy_url}https://github.com/Zonezzc/Centos7/blob/main/script/1_system_update.sh"
+java_install_url="${ghproxy_url}https://github.com/Zonezzc/Centos7/blob/main/script/2_java_install.sh"
 
 # 下载脚本
 function download_script() {
