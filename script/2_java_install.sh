@@ -2,7 +2,7 @@
 
 SOFTWARE_DIR="./software"
 JDK_FILE="jdk-8u202-linux-x64.tar.gz"
-JDK_URL="https://tmp-titan.vx-cdn.com/file-64e32b502d8d9-64e32ba3e1161/jdk-8u202-linux-x64.tar.gz"
+JDK_URL="https://zonezzc.5t-cdn.com/files/652e9acbe04b0/jdk-8u202-linux-x64.tar.gz"
 JAVA_HOME_DIR="/usr/local/java"
 JAVA_VERSION="jdk1.8.0_202"
 

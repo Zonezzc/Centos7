@@ -11,6 +11,7 @@ fi
 
 system_update_url="${ghproxy_url}https://github.com/Zonezzc/Centos7/blob/main/script/1_system_update.sh"
 java_install_url="${ghproxy_url}https://github.com/Zonezzc/Centos7/blob/main/script/2_java_install.sh"
+docker_install_url="${ghproxy_url}https://github.com/Zonezzc/Centos7/blob/main/script/3_docker_install.sh"
 
 # 下载脚本
 function download_script() {
@@ -31,6 +32,7 @@ function show_menu() {
     echo "请选择要执行的脚本："
     echo "1. 更新系统"
     echo "2. 安装Java"
+    echo "3. 安装Docker"
     echo "0. 退出脚本"
     read -p "请输入选项数字: " choice
 }
@@ -49,6 +51,13 @@ function install_java() {
     execute_script "$script_name"
 }
 
+# 安装Java
+function install_docker() {
+    local script_name=$(basename "$docker_install_url")
+    download_script "$docker_install_url"
+    execute_script "$script_name"
+}
+
 # 主程序
 function main() {
     show_menu
@@ -59,6 +68,9 @@ function main() {
             ;;
         2)
             install_java
+            ;;
+        3)
+            install_docker
             ;;
         *)
             echo "无效的选项"
