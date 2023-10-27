@@ -31,11 +31,12 @@ function execute_script() {
 # 显示选项菜单
 function show_menu() {
     echo "请选择要执行的脚本："
-    echo "1. 更新系统"
-    echo "2. 安装Java"
-    echo "3. 安装Docker"
+    echo "1.  更新系统"
+    echo "2.  安装Java"
+    echo "3.  安装Docker"
     echo "10. 全都要"
-    echo "0. 退出脚本"
+    echo "12. 不安装Java"
+    echo "0.  退出脚本"
     read -p "请输入选项数字: " choice
 }
 
@@ -77,6 +78,10 @@ function main() {
         10)
             update_system
             install_java
+            install_docker
+            ;;
+        12)
+            update_system
             install_docker
             ;;
         *)
