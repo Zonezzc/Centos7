@@ -34,6 +34,7 @@ function show_menu() {
     echo "1. 更新系统"
     echo "2. 安装Java"
     echo "3. 安装Docker"
+    echo "10. 全都要"
     echo "0. 退出脚本"
     read -p "请输入选项数字: " choice
 }
@@ -71,6 +72,11 @@ function main() {
             install_java
             ;;
         3)
+            install_docker
+            ;;
+        10)
+            update_system
+            install_java
             install_docker
             ;;
         *)
