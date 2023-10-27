@@ -34,7 +34,6 @@ function show_menu() {
     echo "1. 更新系统"
     echo "2. 安装Java"
     echo "3. 安装Docker"
-    echo "4. 安装Docker-Compose"
     echo "0. 退出脚本"
     read -p "请输入选项数字: " choice
 }
@@ -60,13 +59,6 @@ function install_docker() {
     execute_script "$script_name"
 }
 
-# 安装Docker-Compose
-function install_docker_compose() {
-    local script_name=$(basename "$docker_compose_install_url")
-    download_script "$docker_compose_install_url"
-    execute_script "$script_name"
-}
-
 # 主程序
 function main() {
     show_menu
@@ -80,9 +72,6 @@ function main() {
             ;;
         3)
             install_docker
-            ;;
-        4)
-            install_docker_compose
             ;;
         *)
             echo "无效的选项"
